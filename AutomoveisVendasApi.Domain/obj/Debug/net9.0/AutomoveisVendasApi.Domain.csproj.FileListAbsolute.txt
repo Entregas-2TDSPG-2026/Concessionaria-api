@@ -1,0 +1,11 @@
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\bin\Debug\net9.0\AutomoveisVendasApi.Domain.deps.json
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\bin\Debug\net9.0\AutomoveisVendasApi.Domain.dll
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\bin\Debug\net9.0\AutomoveisVendasApi.Domain.pdb
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.AssemblyInfoInputs.cache
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.AssemblyInfo.cs
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.dll
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\refint\AutomoveisVendasApi.Domain.dll
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.pdb
+C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\ref\AutomoveisVendasApi.Domain.dll
