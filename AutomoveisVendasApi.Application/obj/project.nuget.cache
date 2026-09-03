@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gypZsVlPxC0=",
+  "dgSpecHash": "mi+XGUF/6qQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Application\\AutomoveisVendasApi.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pbrum\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\pbrum\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0\\microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
