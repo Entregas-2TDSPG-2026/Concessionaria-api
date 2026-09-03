@@ -1,5 +1,6 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "automoveisVendasApi", "automoveisVendasApi\automoveisVendasApi.csproj", "{FB0175A9-CBCE-40E4-A7B4-74064F4F2371}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomoveisVendasApi.Domain", "AutomoveisVendasApi.Domain\AutomoveisVendasApi.Domain.csproj", "{7F65B638-096D-441A-A276-10EB9CFBC1A9}"
@@ -7,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomoveisVendasApi.Application", "AutomoveisVendasApi.Application\AutomoveisVendasApi.Application.csproj", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomoveisVendasApi.Infrastructure", "AutomoveisVendasApi.Infrastructure\AutomoveisVendasApi.Infrastructure.csproj", "{B2C3D4E5-F6A7-8901-BCDE-F12345678901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomoveisVendasApi.Domain.Tests", "AutomoveisVendasApi.Domain.Tests\AutomoveisVendasApi.Domain.Tests.csproj", "{639C2BD2-EE75-4EAB-965E-7CF61638074C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomoveisVendasApi.Application.Tests", "AutomoveisVendasApi.Application.Tests\AutomoveisVendasApi.Application.Tests.csproj", "{4C929294-2476-4260-83AB-9ADEF3CAB418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +35,13 @@ Global
 		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639C2BD2-EE75-4EAB-965E-7CF61638074C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639C2BD2-EE75-4EAB-965E-7CF61638074C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639C2BD2-EE75-4EAB-965E-7CF61638074C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639C2BD2-EE75-4EAB-965E-7CF61638074C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C929294-2476-4260-83AB-9ADEF3CAB418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C929294-2476-4260-83AB-9ADEF3CAB418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C929294-2476-4260-83AB-9ADEF3CAB418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C929294-2476-4260-83AB-9ADEF3CAB418}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

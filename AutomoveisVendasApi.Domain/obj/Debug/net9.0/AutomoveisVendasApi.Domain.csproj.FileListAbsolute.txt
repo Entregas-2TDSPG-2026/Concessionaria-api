@@ -9,3 +9,15 @@ C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\Auto
 C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\refint\AutomoveisVendasApi.Domain.dll
 C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.pdb
 C:\Users\labsfiap\Downloads\cp2\AutomoveisVendasApi.Domain\obj\Debug\net9.0\ref\AutomoveisVendasApi.Domain.dll
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\bin\Debug\net9.0\AutomoveisVendasApi.Domain.deps.json
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\bin\Debug\net9.0\AutomoveisVendasApi.Domain.dll
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\bin\Debug\net9.0\AutomoveisVendasApi.Domain.pdb
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.AssemblyInfoInputs.cache
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.AssemblyInfo.cs
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.sourcelink.json
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.dll
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\refint\AutomoveisVendasApi.Domain.dll
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\AutomoveisVendasApi.Domain.pdb
+C:\Users\pbrum\RiderProjects\cp2-Concessionaria-api\AutomoveisVendasApi.Domain\obj\Debug\net9.0\ref\AutomoveisVendasApi.Domain.dll

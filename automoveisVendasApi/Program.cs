@@ -1,4 +1,3 @@
-
 using AutomoveisVendasApi.Application.Interfaces;
 using AutomoveisVendasApi.Application.Services;
 using AutomoveisVendasApi.Infrastructure.Context;
@@ -9,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddControllers();
 
 
@@ -17,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
 
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<ICarroRepository, CarroRepository>();
@@ -27,7 +28,12 @@ builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 
 builder.Services.AddScoped<IVendaService, VendaService>();
 
+
 builder.Services.AddSwaggerDocumentation();
+
+
+builder.Services.AddApplicationHealthChecks();
+
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
@@ -48,6 +54,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwaggerDocumentation();
 }
+
+app.MapApplicationHealthChecks();
 
 app.MapControllers();
 

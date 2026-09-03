@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S3ReEdl9UfU=",
+  "dgSpecHash": "qY5oYWJCn/g=",
   "success": true,
   "projectFilePath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -56,10 +56,8 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
+      "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net9.0"
