@@ -1,5 +1,7 @@
-﻿using AutomoveisVendasApi.Application.DTOs;
+using AutomoveisVendasApi.Application.Common;
+using AutomoveisVendasApi.Application.DTOs;
 using AutomoveisVendasApi.Application.Interfaces;
+using AutomoveisVendasApi.Application.Mappings;
 using AutomoveisVendasApi.Domain.Entities;
 using AutomoveisVendasApi.Domain.Exceptions;
 using Microsoft.Extensions.Logging;
@@ -12,14 +14,14 @@ namespace AutomoveisVendasApi.Application.Services
         private readonly IRepository<Cliente> _clienteRepository;
         private readonly IRepository<Carro> _carroRepository;
         private readonly IRepository<Moto> _motoRepository;
-        private readonly IRepository<Venda> _vendaRepository;
+        private readonly IVendaRepository _vendaRepository;
         private readonly ILogger<VendaService> _logger;
 
         public VendaService(
             IRepository<Cliente> clienteRepository,
             IRepository<Carro> carroRepository,
             IRepository<Moto> motoRepository,
-            IRepository<Venda> vendaRepository,
+            IVendaRepository vendaRepository,
             ILogger<VendaService> logger)
         {
             _clienteRepository = clienteRepository;
@@ -123,6 +125,28 @@ namespace AutomoveisVendasApi.Application.Services
                 },
                 Pagamentos = new List<PagamentoDto>()
             };
+        }
+
+        public async Task<IReadOnlyList<VendaDto>> ListarAsync()
+        {
+            var vendas = await _vendaRepository.GetWithDetailsAsync();
+            return vendas.Select(VendaMapper.ToDto).ToList();
+        }
+
+        public async Task<PagedResult<VendaDto>> ListarPaginadoAsync(long page, int pageSize)
+        {
+            var request = PageRequest.Create(page, pageSize);
+            var resultado = await _vendaRepository.GetPagedAsync(request);
+            return resultado.Map(VendaMapper.ToDto);
+        }
+
+        public async Task<VendaDto> ObterPorIdAsync(int id)
+        {
+            var vendas = await _vendaRepository.GetWithDetailsAsync();
+            var venda = vendas.FirstOrDefault(v => v.VendaId == id)
+                ?? throw new ResourceNotFoundException($"Venda {id} não encontrada.");
+
+            return VendaMapper.ToDto(venda);
         }
     }
 }

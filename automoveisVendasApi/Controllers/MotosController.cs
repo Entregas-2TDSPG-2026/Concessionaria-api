@@ -1,4 +1,5 @@
-﻿
+using Asp.Versioning;
+
 using AutomoveisVendasApi.Application.DTOs;
 using AutomoveisVendasApi.Application.Interfaces;
 using AutomoveisVendasApi.Domain.Entities;
@@ -9,6 +10,7 @@ namespace automoveisVendasApi.Controllers
 {
 
     [ApiController]
+    [ApiVersionNeutral]
     [Route("api/[controller]")]
     [Produces("application/json")]
     public class MotosController : ControllerBase

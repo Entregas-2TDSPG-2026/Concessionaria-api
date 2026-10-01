@@ -766,7 +766,8 @@
       "System.Threading.Channels/7.0.0": {},
       "AutomoveisVendasApi.Application/1.0.0": {
         "dependencies": {
-          "AutomoveisVendasApi.Domain": "1.0.0"
+          "AutomoveisVendasApi.Domain": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0"
         },
         "runtime": {
           "AutomoveisVendasApi.Application.dll": {

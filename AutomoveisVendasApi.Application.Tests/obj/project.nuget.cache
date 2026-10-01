@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G8AXeoBZQnk=",
+  "dgSpecHash": "33i6pHY/Gws=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Application.Tests\\AutomoveisVendasApi.Application.Tests.csproj",
+  "projectFilePath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Application.Tests\\AutomoveisVendasApi.Application.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pbrum\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\pbrum\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",

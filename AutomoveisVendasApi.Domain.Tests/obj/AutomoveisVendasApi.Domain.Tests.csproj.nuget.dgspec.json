@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj": {}
+    "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj": {
+    "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj",
         "projectName": "AutomoveisVendasApi.Domain.Tests",
-        "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj",
+        "projectPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\AutomoveisVendasApi.Domain.Tests.csproj",
         "packagesPath": "C:\\Users\\pbrum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\obj\\",
+        "outputPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pbrum\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj": {
-                "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj"
+              "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj": {
+                "projectPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj"
               }
             }
           }
@@ -40,9 +40,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -85,18 +85,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\pbrum\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.318/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj": {
+    "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj",
         "projectName": "AutomoveisVendasApi.Domain",
-        "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj",
+        "projectPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj",
         "packagesPath": "C:\\Users\\pbrum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\obj\\",
+        "outputPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pbrum\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -121,9 +121,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\pbrum\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.318/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

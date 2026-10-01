@@ -233,3 +233,67 @@ Configurada em `automoveisVendasApi/appsettings.json`:
 - [x] `AutomoveisVendasApi.Domain.Tests` (Fact + Theory, sem mock, sem referenciar Infrastructure/API)
 - [x] `AutomoveisVendasApi.Application.Tests` (mock de repositório, `Times.Never`/`Times.Once`)
 - [x] Migrations, DbContext e seed do CP2 mantidos intactos
+
+---
+
+## CP5 — Versionamento, Paginação e Rate Limit
+
+Recurso versionado: **Vendas** (`/api/vendas`). Os demais recursos (Clientes, Carros, Motos, Pagamentos)
+continuam no ar e marcados com `[ApiVersionNeutral]`, por isso aparecem nos dois grupos do Swagger e
+respondem com ou sem versão.
+
+### URLs
+
+| O que | URL |
+|---|---|
+| Swagger (v1.0 e v2.0) | `http://localhost:5000/swagger` |
+| Health | `http://localhost:5000/health` |
+| Listagem v1 (obsoleta) | `GET /api/vendas?api-version=1.0` · `GET /api/v1/vendas` |
+| Listagem v2 (atual) | `GET /api/vendas` · `GET /api/vendas?api-version=2.0` · `GET /api/v2/vendas` |
+
+### Como informar a versão
+
+| Forma | Exemplo | Resultado |
+|---|---|---|
+| Query string | `GET /api/vendas?api-version=1.0` | lista (v1) |
+| Header | `GET /api/vendas` + `X-Api-Version: 1.0` | lista (v1) |
+| Omitida | `GET /api/vendas` | envelope (**2.0**, versão padrão) |
+| Segmento de URL (extra) | `GET /api/v1/vendas` · `GET /api/v2/vendas` | v1 · v2 |
+
+A resposta traz `api-supported-versions: 1.0, 2.0` e `api-deprecated-versions: 1.0`.
+`GET por id` e `POST` estão mapeados nas **duas** versões, então o fluxo de escrita do CP3 funciona
+com ou sem versão (`POST /api/vendas` cai na 2.0).
+
+### Paginação (somente v2)
+
+| Parâmetro | Padrão | Regra |
+|---|---|---|
+| `page` | 1 | inteiro ≥ 1 |
+| `pageSize` | 20 | inteiro de 1 a **100** |
+
+- Fora da faixa → **400** (`application/problem+json`, com a regra violada no `detail`).
+- Página além do total → **200** com `items: []`.
+- Ordenação estável: `DataVenda` desc + `VendaId` desc.
+- `Count` + `OrderBy` + `Skip` + `Take` executados no banco (`VendaRepository.GetPagedAsync`).
+
+```json
+{ "page": 1, "pageSize": 20, "totalItems": 137, "totalPages": 7, "items": [], "hasPrevious": false, "hasNext": true }
+```
+
+### Rate limit
+
+| Endpoint | Política | Limite | Janela |
+|---|---|---|---|
+| `POST /api/vendas` | `escrita` (janela fixa, por IP) | **10 requisições** | **1 minuto** |
+| `GET /api/vendas` (v2) | `leitura` (janela fixa, por IP) | 60 requisições | 1 minuto |
+| `GET /health` | **sem limite** (`DisableRateLimiting`) | — | — |
+
+Estouro → **429** com header `Retry-After: <segundos>` e corpo `application/problem+json`
+(`status: 429`, `detail`, `traceId`, `retryAfterSeconds`).
+
+### Testes
+
+```bash
+dotnet test
+```
+

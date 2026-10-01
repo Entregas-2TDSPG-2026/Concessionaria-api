@@ -1,4 +1,4 @@
-﻿using AutomoveisVendasApi.Application.DTOs;
+using AutomoveisVendasApi.Application.DTOs;
 using AutomoveisVendasApi.Application.Interfaces;
 using AutomoveisVendasApi.Application.Services;
 using AutomoveisVendasApi.Domain.Entities;
@@ -14,7 +14,7 @@ namespace AutomoveisVendasApi.Application.Tests
         private readonly Mock<IRepository<Cliente>> _clienteRepositoryMock = new();
         private readonly Mock<IRepository<Carro>> _carroRepositoryMock = new();
         private readonly Mock<IRepository<Moto>> _motoRepositoryMock = new();
-        private readonly Mock<IRepository<Venda>> _vendaRepositoryMock = new();
+        private readonly Mock<IVendaRepository> _vendaRepositoryMock = new();
         private readonly Mock<ILogger<VendaService>> _loggerMock = new();
 
         private VendaService CriarService() => new(

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qY5oYWJCn/g=",
+  "dgSpecHash": "7aFibKNT+ZE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pbrum\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pbrum\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
@@ -52,16 +52,5 @@
     "C:\\Users\\pbrum\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
     "C:\\Users\\pbrum\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

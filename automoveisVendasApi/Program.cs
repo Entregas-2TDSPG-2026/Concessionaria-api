@@ -29,7 +29,11 @@ builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 builder.Services.AddScoped<IVendaService, VendaService>();
 
 
+builder.Services.AddApiVersioningConfiguration();
 builder.Services.AddSwaggerDocumentation();
+
+
+builder.Services.AddRateLimitingConfiguration();
 
 
 builder.Services.AddApplicationHealthChecks();
@@ -49,6 +53,8 @@ using (var scope = app.Services.CreateScope())
 
 
 app.UseExceptionHandler();
+
+app.UseRateLimiter();   // depois do UseExceptionHandler e antes do MapControllers
 
 if (app.Environment.IsDevelopment())
 {

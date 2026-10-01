@@ -3121,11 +3121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
       "projectName": "AutomoveisVendasApi.Infrastructure",
-      "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\AutomoveisVendasApi.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\pbrum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pbrum\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3140,11 +3140,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Application\\AutomoveisVendasApi.Application.csproj": {
-              "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Application\\AutomoveisVendasApi.Application.csproj"
+            "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Application\\AutomoveisVendasApi.Application.csproj": {
+              "projectPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Application\\AutomoveisVendasApi.Application.csproj"
             },
-            "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj": {
-              "projectPath": "C:\\Users\\pbrum\\RiderProjects\\cp2-Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj"
+            "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj": {
+              "projectPath": "C:\\Users\\pbrum\\RiderProjects\\Concessionaria-api\\AutomoveisVendasApi.Domain\\AutomoveisVendasApi.Domain.csproj"
             }
           }
         }
@@ -3157,9 +3157,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -3196,20 +3196,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\pbrum\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.318/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
-      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

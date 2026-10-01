@@ -1,4 +1,4 @@
-﻿
+
 using AutomoveisVendasApi.Domain.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -37,7 +37,7 @@ namespace automoveisVendasApi.Exceptions
                 Status = statusCode,
                 Title = title,
                 Type = $"https://httpstatuses.io/{statusCode}",
-                Detail = _environment.IsDevelopment()
+                Detail = statusCode < 500 || _environment.IsDevelopment()
                     ? exception.Message
                     : "Ocorreu um erro ao processar a sua requisição.",
                 Instance = httpContext.Request.Path

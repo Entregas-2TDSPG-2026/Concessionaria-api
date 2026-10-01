@@ -1,47 +1,33 @@
-﻿
-using System.Reflection;
-using Microsoft.OpenApi.Models;
+using Asp.Versioning.ApiExplorer;
+using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace automoveisVendasApi.Extensions
 {
-   
     public static class SwaggerExtensions
     {
         public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services)
         {
             services.AddEndpointsApiExplorer();
-
-            services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "Automóveis Vendas API",
-                    Version = "v1",
-                    Description = "API REST para gerenciamento de uma concessionária de veículos: " +
-                                  "cadastro de clientes, carros e motos, registro de vendas e pagamentos. " +
-                                  "Desenvolvida em .NET 9 seguindo Clean Architecture (Domain, Application, " +
-                                  "Infrastructure e API), com repositório genérico, tratamento global de " +
-                                  "exceções (RFC 7807 / ProblemDetails) e health checks."
-                });
-
-                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
-
-                if (File.Exists(xmlPath))
-                {
-                    options.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
-                }
-            });
+            services.AddSwaggerGen();
+            // Os documentos (um por versão) são criados em ConfigureSwaggerOptions
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
             return services;
         }
 
         public static WebApplication UseSwaggerDocumentation(this WebApplication app)
         {
+            var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Automóveis Vendas API v1");
+                foreach (var d in provider.ApiVersionDescriptions.OrderByDescending(x => x.ApiVersion))
+                {
+                    var nome = $"Automóveis Vendas API {d.GroupName}" + (d.IsDeprecated ? " (obsoleta)" : "");
+                    options.SwaggerEndpoint($"/swagger/{d.GroupName}/swagger.json", nome);
+                }
             });
 
             return app;
