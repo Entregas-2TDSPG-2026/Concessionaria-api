@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using Asp.Versioning.ApiExplorer;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
@@ -6,7 +6,6 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace automoveisVendasApi.Extensions
 {
-    /// <summary>Cria um documento Swagger por versão de API.</summary>
     public sealed class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
         private readonly IApiVersionDescriptionProvider _provider;

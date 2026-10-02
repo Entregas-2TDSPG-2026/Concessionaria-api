@@ -1,4 +1,4 @@
-using AutomoveisVendasApi.Application.Common;
+﻿using AutomoveisVendasApi.Application.Common;
 using AutomoveisVendasApi.Application.DTOs;
 using AutomoveisVendasApi.Application.Interfaces;
 using AutomoveisVendasApi.Application.Mappings;
@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 
 namespace AutomoveisVendasApi.Application.Services
 {
-    
     public class VendaService : IVendaService
     {
         private readonly IRepository<Cliente> _clienteRepository;

@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
@@ -7,8 +7,8 @@ namespace automoveisVendasApi.Extensions
 {
     public static class RateLimitingExtensions
     {
-        public const string EscritaPolicy = "escrita";   // POST /api/vendas
-        public const string LeituraPolicy = "leitura";   // GET  /api/vendas (v2)
+        public const string EscritaPolicy = "escrita";
+        public const string LeituraPolicy = "leitura";
 
         public const int EscritaLimit = 10;
         public static readonly TimeSpan EscritaWindow = TimeSpan.FromMinutes(1);
@@ -55,7 +55,6 @@ namespace automoveisVendasApi.Extensions
             return services;
         }
 
-        // Janela fixa particionada por IP (sem autenticação, o IP é a chave didática).
         private static RateLimitPartition<string> FixedWindowPorIp(HttpContext ctx, string policy, int limit, TimeSpan window)
         {
             var ip = ctx.Connection.RemoteIpAddress?.ToString() ?? "desconhecido";
@@ -66,7 +65,7 @@ namespace automoveisVendasApi.Extensions
                 {
                     PermitLimit = limit,
                     Window = window,
-                    QueueLimit = 0,              // estourou -> 429 imediato (sem fila)
+                    QueueLimit = 0,
                     AutoReplenishment = true
                 });
         }

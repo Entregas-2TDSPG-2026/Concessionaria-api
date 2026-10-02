@@ -4,30 +4,5 @@
         <name>automoveisVendasApi</name>
     </assembly>
     <members>
-        <member name="T:automoveisVendasApi.Controllers.VendasController">
-            <summary>
-            Vendas — único recurso versionado do CP5.
-            1.0 (obsoleta): GET lista devolve o array completo.
-            2.0 (atual):    GET lista devolve envelope paginado.
-            As duas versões usam o MESMO IVendaService.
-            </summary>
-        </member>
-        <member name="M:automoveisVendasApi.Controllers.VendasController.GetAll">
-            <summary>[OBSOLETA] Lista todas as vendas (array, sem paginação).</summary>
-        </member>
-        <member name="M:automoveisVendasApi.Controllers.VendasController.GetPaged(System.Int64,System.Int32)">
-            <summary>Lista vendas paginadas (envelope com totais).</summary>
-            <param name="page">Página, começando em 1 (padrão 1).</param>
-            <param name="pageSize">Itens por página, de 1 a 100 (padrão 20).</param>
-        </member>
-        <member name="M:automoveisVendasApi.Controllers.VendasController.GetById(System.Int32)">
-            <summary>Busca uma venda pelo id (1.0 e 2.0).</summary>
-        </member>
-        <member name="M:automoveisVendasApi.Controllers.VendasController.Create(AutomoveisVendasApi.Application.DTOs.CreateVendaDto)">
-            <summary>Registra uma venda (1.0 e 2.0). Limitado a 10 requisições/minuto por IP.</summary>
-        </member>
-        <member name="T:automoveisVendasApi.Extensions.ConfigureSwaggerOptions">
-            <summary>Cria um documento Swagger por versão de API.</summary>
-        </member>
     </members>
 </doc>

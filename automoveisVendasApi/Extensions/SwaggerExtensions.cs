@@ -1,4 +1,4 @@
-using Asp.Versioning.ApiExplorer;
+﻿using Asp.Versioning.ApiExplorer;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -10,7 +10,7 @@ namespace automoveisVendasApi.Extensions
         {
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
-            // Os documentos (um por versão) são criados em ConfigureSwaggerOptions
+
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
             return services;

@@ -1,4 +1,4 @@
-using AutomoveisVendasApi.Application.Common;
+﻿using AutomoveisVendasApi.Application.Common;
 using AutomoveisVendasApi.Application.Interfaces;
 using AutomoveisVendasApi.Application.Services;
 using AutomoveisVendasApi.Domain.Entities;
@@ -51,7 +51,7 @@ namespace AutomoveisVendasApi.Application.Tests
             Assert.Equal(2, resultado.Page);
             Assert.Equal(2, resultado.PageSize);
             Assert.Equal(5, resultado.TotalItems);
-            Assert.Equal(3, resultado.TotalPages);   // teto de 5 / 2
+            Assert.Equal(3, resultado.TotalPages);
             Assert.Single(resultado.Items);
             Assert.True(resultado.HasPrevious);
             Assert.True(resultado.HasNext);

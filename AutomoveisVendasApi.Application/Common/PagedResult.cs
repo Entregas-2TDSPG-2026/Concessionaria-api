@@ -1,6 +1,5 @@
-namespace AutomoveisVendasApi.Application.Common
+﻿namespace AutomoveisVendasApi.Application.Common
 {
-    /// <summary>Envelope paginado devolvido pela listagem v2.</summary>
     public class PagedResult<T>
     {
         public long Page { get; init; }
@@ -16,7 +15,7 @@ namespace AutomoveisVendasApi.Application.Common
             Page = page,
             PageSize = pageSize,
             TotalItems = totalItems,
-            // teto de totalItems / pageSize (pageSize já foi validado: 1..100)
+
             TotalPages = (int)Math.Ceiling(totalItems / (double)pageSize),
             Items = items
         };

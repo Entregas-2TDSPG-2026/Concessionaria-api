@@ -1,9 +1,8 @@
-using AutomoveisVendasApi.Application.DTOs;
+﻿using AutomoveisVendasApi.Application.DTOs;
 using AutomoveisVendasApi.Domain.Entities;
 
 namespace AutomoveisVendasApi.Application.Mappings
 {
-    /// <summary>Entidade -> DTO. Compartilhado por v1 e v2 (o JSON de cada item é o mesmo).</summary>
     public static class VendaMapper
     {
         public static VendaDto ToDto(Venda v) => new()

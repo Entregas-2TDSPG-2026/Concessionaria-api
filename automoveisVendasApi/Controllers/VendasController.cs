@@ -1,4 +1,4 @@
-using Asp.Versioning;
+﻿using Asp.Versioning;
 using AutomoveisVendasApi.Application.Common;
 using AutomoveisVendasApi.Application.DTOs;
 using AutomoveisVendasApi.Application.Interfaces;
@@ -8,17 +8,11 @@ using Microsoft.AspNetCore.RateLimiting;
 
 namespace automoveisVendasApi.Controllers
 {
-    /// <summary>
-    /// Vendas — único recurso versionado do CP5.
-    /// 1.0 (obsoleta): GET lista devolve o array completo.
-    /// 2.0 (atual):    GET lista devolve envelope paginado.
-    /// As duas versões usam o MESMO IVendaService.
-    /// </summary>
     [ApiController]
     [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("2.0")]
-    [Route("api/[controller]")]                        // ?api-version= ou header X-Api-Version
-    [Route("api/v{version:apiVersion}/[controller]")]  // /api/v1/vendas e /api/v2/vendas
+    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [Produces("application/json")]
     public class VendasController : ControllerBase
     {
@@ -31,7 +25,6 @@ namespace automoveisVendasApi.Controllers
             _logger = logger;
         }
 
-        /// <summary>[OBSOLETA] Lista todas as vendas (array, sem paginação).</summary>
         [HttpGet]
         [MapToApiVersion("1.0")]
         [ProducesResponseType(typeof(IEnumerable<VendaDto>), StatusCodes.Status200OK)]
@@ -41,9 +34,6 @@ namespace automoveisVendasApi.Controllers
             return Ok(vendas);
         }
 
-        /// <summary>Lista vendas paginadas (envelope com totais).</summary>
-        /// <param name="page">Página, começando em 1 (padrão 1).</param>
-        /// <param name="pageSize">Itens por página, de 1 a 100 (padrão 20).</param>
         [HttpGet]
         [MapToApiVersion("2.0")]
         [EnableRateLimiting(RateLimitingExtensions.LeituraPolicy)]
@@ -58,7 +48,6 @@ namespace automoveisVendasApi.Controllers
             return Ok(resultado);
         }
 
-        /// <summary>Busca uma venda pelo id (1.0 e 2.0).</summary>
         [HttpGet("{id:int}")]
         [ProducesResponseType(typeof(VendaDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
@@ -68,7 +57,6 @@ namespace automoveisVendasApi.Controllers
             return Ok(venda);
         }
 
-        /// <summary>Registra uma venda (1.0 e 2.0). Limitado a 10 requisições/minuto por IP.</summary>
         [HttpPost]
         [EnableRateLimiting(RateLimitingExtensions.EscritaPolicy)]
         [ProducesResponseType(typeof(VendaDto), StatusCodes.Status201Created)]

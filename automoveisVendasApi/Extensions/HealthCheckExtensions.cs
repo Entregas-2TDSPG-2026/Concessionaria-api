@@ -1,4 +1,4 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 using AutomoveisVendasApi.Infrastructure.Context;
 using automoveisVendasApi.HealthChecks;
 using Microsoft.AspNetCore.Builder;
@@ -35,7 +35,7 @@ namespace automoveisVendasApi.Extensions
                     [HealthStatus.Degraded] = StatusCodes.Status200OK,
                     [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable
                 }
-            }).DisableRateLimiting();   // CP5: sonda de saúde nunca divide o teto
+            }).DisableRateLimiting();
 
             return endpoints;
         }

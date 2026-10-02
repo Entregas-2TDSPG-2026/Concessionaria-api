@@ -1,11 +1,7 @@
-using AutomoveisVendasApi.Domain.Exceptions;
+﻿using AutomoveisVendasApi.Domain.Exceptions;
 
 namespace AutomoveisVendasApi.Application.Common
 {
-    /// <summary>
-    /// Parâmetros de paginação já validados. A única forma de obter uma instância é <see cref="Create"/>,
-    /// então qualquer código que receba um PageRequest pode confiar nos limites.
-    /// </summary>
     public sealed record PageRequest
     {
         public const int DefaultPage = 1;
@@ -15,7 +11,6 @@ namespace AutomoveisVendasApi.Application.Common
         public long Page { get; }
         public int PageSize { get; }
 
-        /// <summary>Quantidade de linhas a pular (Skip). Saturado em long.MaxValue para não estourar.</summary>
         public long Offset => (Page - 1) > long.MaxValue / PageSize
             ? long.MaxValue
             : (Page - 1) * PageSize;

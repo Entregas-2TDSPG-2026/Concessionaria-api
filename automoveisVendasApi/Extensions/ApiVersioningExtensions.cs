@@ -1,4 +1,4 @@
-using Asp.Versioning;
+﻿using Asp.Versioning;
 
 namespace automoveisVendasApi.Extensions
 {
@@ -10,18 +10,18 @@ namespace automoveisVendasApi.Extensions
                 .AddApiVersioning(options =>
                 {
                     options.DefaultApiVersion = new ApiVersion(2, 0);
-                    options.AssumeDefaultVersionWhenUnspecified = true;   // sem versão -> 2.0
-                    options.ReportApiVersions = true;                      // api-supported-versions / api-deprecated-versions
+                    options.AssumeDefaultVersionWhenUnspecified = true;
+                    options.ReportApiVersions = true;
 
                     options.ApiVersionReader = ApiVersionReader.Combine(
-                        new QueryStringApiVersionReader("api-version"),    // ?api-version=1.0
-                        new HeaderApiVersionReader("X-Api-Version"),       // X-Api-Version: 1.0
-                        new UrlSegmentApiVersionReader());                 // /api/v1/vendas (recomendado)
+                        new QueryStringApiVersionReader("api-version"),
+                        new HeaderApiVersionReader("X-Api-Version"),
+                        new UrlSegmentApiVersionReader());
                 })
                 .AddMvc()
                 .AddApiExplorer(options =>
                 {
-                    options.GroupNameFormat = "'v'VVVV";                   // v1.0, v2.0
+                    options.GroupNameFormat = "'v'VVVV";
                     options.SubstituteApiVersionInUrl = true;
                 });
 

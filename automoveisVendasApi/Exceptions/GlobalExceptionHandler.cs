@@ -1,11 +1,9 @@
-
-using AutomoveisVendasApi.Domain.Exceptions;
+﻿using AutomoveisVendasApi.Domain.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace automoveisVendasApi.Exceptions
 {
-
     public class GlobalExceptionHandler : IExceptionHandler
     {
         private readonly ILogger<GlobalExceptionHandler> _logger;
@@ -26,7 +24,6 @@ namespace automoveisVendasApi.Exceptions
 
             var (statusCode, title) = MapException(exception);
 
-           
             _logger.LogError(
                 exception,
                 "Exceção não tratada capturada pelo GlobalExceptionHandler. TraceId: {TraceId}, StatusCode: {StatusCode}",

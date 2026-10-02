@@ -1,4 +1,4 @@
-using AutomoveisVendasApi.Application.Interfaces;
+﻿using AutomoveisVendasApi.Application.Interfaces;
 using AutomoveisVendasApi.Application.Services;
 using AutomoveisVendasApi.Infrastructure.Context;
 using AutomoveisVendasApi.Infrastructure.Repositories;
@@ -8,16 +8,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddControllers();
-
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
 
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<ICarroRepository, CarroRepository>();
@@ -25,25 +21,19 @@ builder.Services.AddScoped<IMotoRepository, MotoRepository>();
 builder.Services.AddScoped<IVendaRepository, VendaRepository>();
 builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 
-
 builder.Services.AddScoped<IVendaService, VendaService>();
-
 
 builder.Services.AddApiVersioningConfiguration();
 builder.Services.AddSwaggerDocumentation();
 
-
 builder.Services.AddRateLimitingConfiguration();
 
-
 builder.Services.AddApplicationHealthChecks();
-
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 var app = builder.Build();
-
 
 using (var scope = app.Services.CreateScope())
 {
@@ -51,10 +41,9 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
-
 app.UseExceptionHandler();
 
-app.UseRateLimiter();   // depois do UseExceptionHandler e antes do MapControllers
+app.UseRateLimiter();
 
 if (app.Environment.IsDevelopment())
 {
